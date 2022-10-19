@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+
+import Home from './Home';
+import Team from './Team';
+import TeamU9 from './TeamU9';
+import TeamU13 from './TeamU13';
+import Redirect from "./Redirect";
+import Partners from './Partners';
+import Contact from './Contact';
+import Program from './Program';
+import PersonalTraining from './PersonalTraining';
+
+import { Route, Routes } from "react-router-dom";
+
 
 function App() {
+	// document.querySelector("header").style.display = "none";
+
+	
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+		<Routes>
+			<Route exact path="/" element={<Home />} />
+			<Route path="/parteneri" element={<Partners />} />
+			<Route path="/contact" element={<Contact />} />
+			<Route path="/echipe" element={<Team />} />
+			<Route path="/echipe/echipa-u9" element={<TeamU9 />} />
+			<Route path="/echipe/echipa-u13" element={<TeamU13 />} />
+			<Route path="/redirectioneaza" element={<Redirect />} />
+			<Route path="/program" element={<Program />} />
+			<Route path="/antrenament-individual" element={<PersonalTraining />} />
+		</Routes>
   );
 }
 

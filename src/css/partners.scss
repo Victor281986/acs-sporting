@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600&display=swap');
+
+* {
+	margin: 0;
+	padding: 0
+}
+
+html, body, #root {
+    overflow: visible;
+}
+
+.main-partners {
+	position: relative;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 30%;
+	height: 30%;
+	margin: 10px;
+	box-shadow: 0px 15px 12px #ccc;
+	cursor: pointer;
+
+	.img-container {
+		display: flex;
+		align-items: center;
+		width: 300px;
+		height: 300px;
+		margin-bottom: .5rem;
+		padding-top: .5rem;
+		border-bottom: 1px solid #ccc;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	i {
+		margin-left: 5px
+	}
+}
+
+.card > a {
+	margin-block: .25rem;
+	margin-bottom: .5rem;
+	text-decoration: none;
+	color: #0c46b3;
+}
+
+.precontent-partners {
+	background-image: url(../images/partners-img.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 300px;
+	position: relative;
+	
+	.text-container {
+		display: flex;
+		box-sizing: border-box;
+		background: #fff;
+		border-bottom: 5px solid #ccc;
+		font-size: 30px;
+		font-weight: bold;
+		font-family: "Montserrat Alternates";
+		text-align: center;
+		width: 10ch;
+		position: absolute;
+		padding: 1.5rem;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%)
+	}
+}
+
+
+
+.main-partners {
+	position: relative;
+	
+	.row  {
+		display: flex;
+		width: 100%;
+		justify-content: space-evenly;
+		margin-block: 2rem;
+	}
+	
+	.description {
+		display: flex;
+		justify-content: center;
+		padding-block: 3rem;
+		width: 100%;
+	}
+	
+	p {
+		width: 60%;
+		text-align: center;
+		font-family: "Montserrat Alternates";
+		font-weight: 500;
+	}
+	
+	span {
+		font-weight: 700;
+	}
+}
+
+
+footer {
+	font-weight: 100
+}
+
+
+@media screen and (max-width: 500px) {
+	.main-partners{
+		.row {
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+		}
+		
+		p {
+			font-size: .75rem;
+			width: 95%;
+		}
+	}
+
+	.precontent-partners {
+		height: 200px;
+		
+	  .text-container {
+		  width: 10ch !important;
+	  }
+	}
+
+  .card {
+		width: 90%;
+		margin-top: 3rem;
+
+		.img-container {
+			width: 90%;
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+}

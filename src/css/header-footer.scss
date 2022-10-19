@@ -1,0 +1,290 @@
+* {
+	margin: 0;
+	padding: 0
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  z-index: 5;
+	position: relative;
+
+	nav {
+	  display: flex;
+		flex-direction: column;
+	  align-items: center;
+	  justify-content: space-evenly;
+	  width: 100%;
+
+		a {
+		  text-align: center;
+		  text-decoration: none;
+		  color: #fff;
+		  margin: 0 1em;
+		  max-width: max-content;
+		  letter-spacing: .05rem;
+		  padding: .5rem;
+		  z-index: 10;
+		  width: max-content;
+		  position: relative;
+		  transition: color .3s ease-in-out;
+		}
+
+		.header-first-line {
+			display: flex;
+			font-size: 12px;
+			align-items: center;
+			justify-content: flex-end;
+			width: 100%;
+			height: auto;
+			background: #051949;
+			
+			a:hover {
+				opacity: .75
+			}
+
+			i {
+				font-size: 20px;
+			}
+		}
+
+		.header-second-line {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			position: relative;
+			height: 150px;
+			background: #0c46b3;
+			
+			hr {
+				z-index: -1;
+			}
+
+			> img {
+			  width: 140px;
+				position: absolute;
+				left: 5%;
+				top: 50%;
+				transform: translateY(-50%);
+				z-index: 1
+			}
+
+			.header-links {
+				display: flex;
+				width: 100%;
+				padding: 0;
+				align-items: center;
+				justify-content: flex-end;
+				
+				a {
+					height: auto;
+					top: 50%;
+					font-size: .92rem;
+					position: relative;
+				}
+			}
+			
+			.header-partners {
+				display: flex;
+				flex-direction: row;
+				justify-content: flex-end;
+				align-items: center;
+				height: 50%;
+				width: 100%;
+				right: 0;
+
+				a > img {
+					width: 70px;
+					margin-inline: .5rem;
+					user-select: none;
+				}
+			}
+			
+		}
+	}
+}
+
+a {
+  text-decoration: none;
+  
+}
+
+.header-links a::before {
+	content: "";
+	height: 3px;
+	background-color: #fff;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	transition: width .3s ease-in-out;
+}
+
+.header-links a:hover::before {
+	width: 100%
+}
+
+
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: #051949;
+	width: 100%;
+	height: auto;
+	bottom: 0;
+	padding-block: 30px;
+	margin: 0;
+	margin-top: 100px;
+	color: #c3c3c3;
+	position: relative;
+	font-weight: 300 !important;
+
+	a {
+		color: #fff;
+		text-decoration: none;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+
+	a[href="https://github.com/AlinAlexandruPeter"] {
+		margin-left: 3px;
+	}
+	
+	.upper-footer {
+		display: flex;
+		align-items: center;
+		width: 95%;
+		margin: 0 auto;
+		justify-content: space-between;
+
+		span:first-of-type {
+			width: 18%;
+			text-align: left;
+
+			i {
+				margin-right: 3px;
+			}
+		}
+
+		:last-child {
+			text-align: right;
+		}
+
+		#legal {
+			text-align: right;
+		}
+
+		.footer-main-links {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: auto;
+		}
+
+		.footer-partners {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 50%;
+
+			hr {
+				height: 1.5rem;
+				border: 1px solid #c3c3c3;
+				margin-inline: 15px
+			}
+
+			img:not(:first-of-type) {
+				width: 100px;
+			}
+
+			img:first-of-type {
+				width: 50px;
+			}
+
+			.partners {
+				margin-inline: 10px;
+				position: relative;
+			}
+		}
+
+		.footer-contact {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 50%;
+			
+			hr {
+				height: 1.5rem;
+				border: 1px solid #c3c3c3;
+				margin-inline: 15px
+			}
+
+			a {
+				margin-inline: 8px;
+				font-size: 1.5rem;
+				color: #c3c3c3;
+				text-decoration: none;
+			}
+		}
+	}
+
+	.lower-footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		margin-top: 20px;
+
+		i {
+			font-size: 1.25rem;
+		}
+	}
+}
+
+
+@media screen and (max-width: 500px) {
+	header {
+		display: none
+	}
+
+	.upper-footer {
+		flex-direction: column;
+		align-items: center;
+		
+	}
+
+	.upper-footer > * {
+		margin-bottom: 3rem;
+	}
+
+	.upper-footer #footer-contact {
+		width: 100%;
+		text-align: center;
+	}
+
+	#legal {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		width: 100%;
+	}
+
+	.footer-partners h3,
+	.footer-partners hr,
+	a[href="https://github.com/AlinAlexandruPeter/acs-sporting"] {
+		 display: none;
+	}
+
+	.lower-footer {
+		flex-direction: column;
+		justify-content: center;
+	}
+}
