@@ -8,14 +8,13 @@ import Redirect from "./Redirect";
 import Partners from './Partners';
 import Contact from './Contact';
 import Program from './Program';
+import Gallery from './Gallery';
 import PersonalTraining from './PersonalTraining';
 
 import { Route, Routes } from "react-router-dom";
 
 
 function App() {
-	// document.querySelector("header").style.display = "none";
-
 	
   return (
 		<Routes>
@@ -27,6 +26,7 @@ function App() {
 			<Route path="/echipe/echipa-u13" element={<TeamU13 />} />
 			<Route path="/redirectioneaza" element={<Redirect />} />
 			<Route path="/program" element={<Program />} />
+			<Route path="/galerie-foto" element={<Gallery />} />
 			<Route path="/antrenament-individual" element={<PersonalTraining />} />
 		</Routes>
   );
