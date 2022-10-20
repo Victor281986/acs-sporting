@@ -26,7 +26,7 @@ export default function Navbar() {
               <Link to="/">Acasă</Link>
               <Link to="/parteneri">Parteneri</Link>
               <Link to="/contact">Contactează-ne</Link>
-              <a href="#">Galerie foto</a>
+			  <Link to="/galerie-foto">Galerie Foto</Link>
 							<a href="https://www.facebook.com/CS-Sporting-Lupeni-2241846622740213" type="_blank">
                 <i className="fa-brands fa-facebook-f"></i>
               </a>
@@ -63,7 +63,7 @@ export default function Navbar() {
 				<Link to="/parteneri">PARTENERI</Link>
 				<Link to="/program">PROGRAM COMPETIȚIONAL</Link>
 				<Link to="/antrenament-individual">ANTREMAENT INDIVIDUAL</Link>
-				<a href="#">GALERIE FOTO</a>
+				<Link to="/galerie-foto">GALERIE FOTO</Link>
 				<Link to="/redirectioneaza">REDIRECȚIONEAZĂ 3.5%</Link>
 			</div>
 		</div>
