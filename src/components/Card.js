@@ -1,7 +1,5 @@
 import React from "react";
 
-import partnersInfo from "../js/partners";
-
 export default function Card(props) {
 	const { img, name, link } = props;
 	const redirect = e => {
