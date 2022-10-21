@@ -42,11 +42,6 @@ export default function TeamU9() {
 			<div className="precontent-u13">
 </div>
 
-			<div className="main-u13">
-				<div className="carousel-wrapper">
-				</div>
-	
-			</div>
 
 			<div className="cards-container">
 				{cards}
