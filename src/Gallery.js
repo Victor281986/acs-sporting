@@ -10,7 +10,7 @@ import "./css/gallery.scss";
 
 import cupaStraja19 from "./js/cupa-straja-19";
 import cupaStraja22 from "./js/cupa-straja-22";
-import cupaCraciunului21 from "./js/cupa-craciunului-21";
+import cupaCraciunului21 from "./js/cupa-craciun-21";
 
 export default function Gallery() {
 	document.title = "Galerie Foto";
