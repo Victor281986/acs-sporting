@@ -17,13 +17,22 @@ import cupsStraja16 from "./images/tournaments/cupa-straja-2019/16.JPG";
 
 
 const images = [
-  cupaCraciun1,
-  cupaCraciun2,
-  cupaCraciun3,
-  cupaCraciun4,
-  cupaCraciun5,
-  cupaCraciun6,
-  cupaCraciun7
+  cupaStraja1,
+  cupaStraja2,
+  cupaStraja3,
+  cupaStraja4,
+  cupaStraja5,
+  cupaStraja6,
+  cupaStraja7,
+  cupaStraja8,
+  cupaStraja9,
+  cupaStraja10,
+  cupaStraja11,
+  cupaStraja12,
+  cupaStraja13,
+  cupaStraja14,
+  cupaStraja15,
+  cupaStraja16
 ];
 
 export default images;
