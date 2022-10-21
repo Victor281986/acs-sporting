@@ -27,14 +27,14 @@ export default function Team() {
 					key={1}
 					img={teamU9}
 					name={"Echipa U9"}
-					link="/echipe/echipa-u9"
+					link="/echipa-u9"
 				/>
 				
 				<Card 
 					key={2}
 					img={teamU13}
 					name={"Echipa U13"}
-					link="/echipe/echipa-u13"
+					link="/echipa-u13"
 				/>
 			</div>
 			
