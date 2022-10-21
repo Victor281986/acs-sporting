@@ -12,23 +12,36 @@ import cupaStraja19 from "./js/cupa-straja-19";
 import cupaStraja22 from "./js/cupa-straja-22";
 import cupaCraciunului21 from "./js/cupa-craciun-21";
 
+
 export default function Gallery() {
 	document.title = "Galerie Foto";
 
         const cupaCraciunului21Images = cupaCraciunului21.map(img => {
-          return <img src={img} alt="" />
+          return <img
+			key={cupaCraciunului21.indexOf(img)}
+		  	src={img}
+			alt=""
+		  />
         });
 
         const cupaStraja19Images = cupaStraja19.map(img => {
-          return <img src={img} alt="" />
+			return <img
+				key={cupaStraja19.indexOf(img)}
+				src={img}
+				alt=""
+		    />
         });
 
         const cupaStraja22Images = cupaStraja22.map(img => {
-          return <img src={img} alt="" />
+			return <img
+				key={cupaStraja22.indexOf(img)}
+				src={img}
+				alt=""
+		    />
         });
 	
 	return (
-		<div class="main-gallery"> 
+		<div className="main-gallery"> 
 			<Navbar />
 			<NavPhones />
 			<Menu />
@@ -36,22 +49,19 @@ export default function Gallery() {
 			<div className="precontent-gallery"></div>
 
 			<Tournament
-                          name="Cupa Crăciunului 2021"
-                          images={cupaCraciunului21Images}
-                          mainImages={cupaCraciunului21[0]}
-                        />
+				name="Cupa Crăciunului 2021"
+				images={cupaCraciunului21Images}
+			/>
 
-                        <Tournament
-                          name="Cupa Straja 2019"
-                          images={cupaStraja19Images}
-                          mainImages={cupaStraja19[0]}
-                        />
+			<Tournament
+				name="Cupa Straja 2019"
+				images={cupaStraja19Images}
+			/>
 
-                        <Tournament
-                          name="Cupa Straja 2022"
-                          images={cupaStraja22Images}
-                          mainImages={cupaStraja22[0]}
-                        />
+			<Tournament
+				name="Cupa Straja 2022"
+				images={cupaStraja22Images}
+			/>
 
 			<Footer />
 		</div>
