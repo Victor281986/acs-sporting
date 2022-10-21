@@ -15,16 +15,14 @@ import playersU13 from "./js/playersU13";
 
 export default function Home() {
 	
-  const allPlayers = [...playersU9, ...playersU13];
-	
 	return (
 		<div>
-		<Navbar />
-		<NavPhones />
-		<Menu />
-		<Hero />
-		<AboutUs />
-		<Footer />
-    </div>
+			<Navbar />
+			<NavPhones />
+			<Menu />
+			<Hero />
+			<AboutUs />
+			<Footer />
+   		</div>
 	)
 }
