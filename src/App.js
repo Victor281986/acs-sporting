@@ -22,8 +22,8 @@ function App() {
 			<Route path="/parteneri" element={<Partners />} />
 			<Route path="/contact" element={<Contact />} />
 			<Route path="/echipe" element={<Team />} />
-			<Route path="/echipe/echipa-u9" element={<TeamU9 />} />
-			<Route path="/echipe/echipa-u13" element={<TeamU13 />} />
+			<Route path="/echipa-u9" element={<TeamU9 />} />
+			<Route path="/echipa-u13" element={<TeamU13 />} />
 			<Route path="/redirectioneaza" element={<Redirect />} />
 			<Route path="/program" element={<Program />} />
 			<Route path="/galerie-foto" element={<Gallery />} />
