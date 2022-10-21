@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client';
 import emailjs from "emailjs-com";
 
 export default function MainTraining() {
-    let chosenHour, trainingInterval, buttonClickedCounter = 0;
+    let chosenHour, buttonClickedCounter = 0;
     let name, email, date;
 
     let tomorrow = new Date(Date.now() + (12096e5 / 14))
@@ -72,8 +72,7 @@ export default function MainTraining() {
     };
 
     const sendEmail = () => {
-		const form = document.querySelector("form");
-        const formContainer = document.querySelector(".form");
+	const form = document.querySelector("form");
         const message = form.querySelector("input[name='message']");
         const date = document.querySelector("input[type='date']").valueAsDate;
         message.value = `${name.value} și-a programat un antrenament pe data ${date} de în intervalul orar ${chosenHour}.`
