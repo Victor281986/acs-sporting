@@ -11,7 +11,7 @@ export default function Menu() {
 				<Link to="/contact">Contactează-ne</Link>
 				<Link to="/program">Program competițional</Link>
 				<Link to="/antrenament-individual">Antrenament individual</Link>
-				<Link to="/galerie-foto">Galerie Foto</Link>
+				<Link to="/galerie-foto">Galerie foto</Link>
 				<Link to="/redirectioneaza">Redirecționează 3.5%</Link>
 				
 				<div className="social-links">
