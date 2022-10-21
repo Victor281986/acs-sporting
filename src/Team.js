@@ -13,21 +13,11 @@ import "./css/team.scss"
 
 export default function Team() {
 	document.title = "Echipe";
-	//window.location.replace("/echipe/echipa-u9")
-	
-	const redirectU9 = () => {
-		document.querySelector("#u9-link").click();
-	}
-	
-	const redirectU13 = () => {
-		document.querySelector("#u13-link").click();
-	}
-  
 	
 	return (
 		<div className="main-team">
 			<Navbar />
-      <NavPhones />
+      			<NavPhones />
 			<Menu />
 
 			<div className="precontent-team"></div>
