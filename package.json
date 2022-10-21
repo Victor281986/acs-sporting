@@ -1,5 +1,6 @@
 {
   "name": "acs-sporting",
+  "homepage": "https://sportinglupeni.ro"
   "version": "0.1.0",
   "private": true,
   "dependencies": {
