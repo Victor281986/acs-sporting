@@ -28,9 +28,8 @@ export default function NavPhones() {
 			setTimeout(() => {
 				const buttonIcon = document.querySelector(".header-phones button i");
 
-			  buttonIcon.classList.remove("fa-bars");
-        buttonIcon.classList.add("fa-times");
-
+				buttonIcon.classList.remove("fa-bars");
+        			buttonIcon.classList.add("fa-times");
 			});
 			openMenu = true;
 
@@ -61,13 +60,10 @@ export default function NavPhones() {
 	}
 
 	setTimeout(() => {
-    const headerLogo = document.querySelector("#logo-phones")
-
-	  headerLogo.addEventListener("click", () => {
+    		const headerLogo = document.querySelector("#logo-phones")
+		headerLogo.addEventListener("click", () => {
 			window.location.replace("/")
 		});
-
-		const buttonIcon = document.querySelector(".header-phones button i");	
 	}, 100);
 
 	
