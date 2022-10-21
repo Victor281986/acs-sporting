@@ -4,7 +4,7 @@ export default function RedirectSteps() {
 	return (
 		<div className="redirect-container">
 		  <p>
-			  Redirecționează 3,5% din impozitual pe venit datorat anului 2022 pentru sprijinirea dezvoltării talentelor sportive din cadrul Asociatiei Club Sportiv Sporting Lupeni.
+			  Redirecționează 3,5% din impozitual pe venit datorat anului 2023 pentru sprijinirea dezvoltării talentelor sportive din cadrul Asociatiei Club Sportiv Sporting Lupeni.
 		  </p>
 		  <section className="steps step-1">
 				<h3>1. Descarcă declarația unică</h3>
@@ -19,7 +19,7 @@ export default function RedirectSteps() {
 					</a>
 				</button>
 				<span>
-					Dacă în 2022 ai avut venituri din activități independente/agricole, drepturi de proprietate intelectuală și cedarea folosinței bunurilor și ai obligația depunerii Declarației Unice.
+					Dacă în 2023 ai avut venituri din activități independente/agricole, drepturi de proprietate intelectuală și cedarea folosinței bunurilor și ai obligația depunerii Declarației Unice.
 				</span>
 				<br />
 
@@ -80,7 +80,7 @@ export default function RedirectSteps() {
 			<section className="steps step-3">
 				<h3>3. Trimite</h3>
 				<span>
-					Trimite formularul completat (doar prima pagină) printat și scanat sau direct în format electronic, până la data de 30 aprilie 2022, direct către noi, la adresa palivanvictor@yahoo.co.uk, urmând ca noi să le trimitem spre ANAF (Conform <a href="https://static.anaf.ro/static/10/Anaf/legislatie/OPANAF_936_2020.pdf">ordin ANAF nr.936/2020</a>, publicat in M.Of. <a href="https://legislatie.just.ro/Public/DetaliiDocument/223792">nr.325/2020</a>.) sau încarcă-l direct aici, folosind formularul din secțiunea "4. Încarcă".
+					Trimite formularul completat (doar prima pagină) printat și scanat sau direct în format electronic, până la data de 30 aprilie 2023, direct către noi, la adresa palivanvictor@yahoo.co.uk, urmând ca noi să le trimitem spre ANAF (Conform <a href="https://static.anaf.ro/static/10/Anaf/legislatie/OPANAF_936_2020.pdf">ordin ANAF nr.936/2020</a>, publicat in M.Of. <a href="https://legislatie.just.ro/Public/DetaliiDocument/223792">nr.325/2020</a>.) sau încarcă-l direct aici, folosind formularul din secțiunea "4. Încarcă".
 				</span>
         <br /><br />
 				<h4>Cum mai poți trimite:</h4>
@@ -111,13 +111,13 @@ export default function RedirectSteps() {
 				<h3>FAQs</h3>
 				<br />
 				<h4>Până când mai pot trimite formularul?</h4>
-				Doar până pe 30 aprilie 2022.
+				Doar până pe 30 aprilie 2023.
 				<br />
 				<br />
 				
 			 	<h4>L-am descărcat, ce trebuie să completez?</h4>
 				E nevoie să completezi de mână, cu majuscule, secțiunea I care conține datele tale de identificare și să semnezi la Semnătura contribuabilului. Gata!
-				Vei vedea că sunt deja completate anul și datele Academiei de fotbal "Gheorghe Hagi". Dacă ai deja un formular printat și vrei să le completezi de mână, iată datele mai jos:
+				Vei vedea că sunt deja completate anul și datele ACS Sporting Lupeni. Dacă ai deja un formular printat și vrei să le completezi de mână, iată datele mai jos:
 				<br />
 				<br />
 				&nbsp;
@@ -148,7 +148,7 @@ export default function RedirectSteps() {
 				<br />
 				
 				<h4>Aceasta este o donație?</h4>
-				Nu. Este alegerea ta despre cum să fie folosiți o parte din banii pe care i-ai virat deja statului, ca impozit pe veniturile obținute în 2022. În cazul în care nu alegi să susții o cauză anume, întreaga sumă va rămâne la bugetul de stat
+				Nu. Este alegerea ta despre cum să fie folosiți o parte din banii pe care i-ai virat deja statului, ca impozit pe veniturile obținute în 2023. În cazul în care nu alegi să susții o cauză anume, întreaga sumă va rămâne la bugetul de stat
 			</div>
 		</div>
 	);
