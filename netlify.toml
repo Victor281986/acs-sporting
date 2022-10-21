@@ -1,0 +1,4 @@
+[[redirects]]
+from = "/*"
+to = "/infrx.htnl"
+status = 200
