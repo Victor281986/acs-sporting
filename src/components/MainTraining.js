@@ -1,8 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom/client';
+
+import emailjs from "emailjs-com";
 
 export default function MainTraining() {
-    let chosenHour;
+    let chosenHour, trainingInterval, buttonClickedCounter = 0;
+    let name, email, date;
 
     let tomorrow = new Date(Date.now() + (12096e5 / 14))
     .toISOString()
@@ -39,7 +42,7 @@ export default function MainTraining() {
     };
 
     let counter = 0;
-    const style = e => {
+    const selectHour = e => {
         if (counter > 0) {
             let prevSelectedHour = document.querySelector(".selected");
             prevSelectedHour.classList.remove("selected");
@@ -59,14 +62,36 @@ export default function MainTraining() {
                 <section
                     key={hour}
                     className="hour"
-                    onClick={style}
+                    onClick={selectHour}
                 >
                     <span>{`${hour}:00 - ${hour + 1}:00`}</span>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
                 </section>
             )
         });
-    }
+    };
+
+    const sendEmail = () => {
+		const form = document.querySelector("form");
+        const formContainer = document.querySelector(".form");
+        const message = form.querySelector("input[name='message']");
+        const date = document.querySelector("input[type='date']").valueAsDate;
+        message.value = `${name.value} și-a programat un antrenament pe data ${date} de în intervalul orar ${chosenHour}.`
+		
+		emailjs.sendForm('service_sporting', 'template_sporting', form, process.env.REACT_APP_EMAILJS_PUBLICKEY)
+        .then(() => {
+			document.querySelector(".form").style.opacity = "0";
+			document.querySelector(".form").style.height = "60px";
+			document.querySelector(".main-training h2").style.opacity = "0";
+			document.querySelector(".form-checkmark").style.zIndex = "unset";
+            setTimeout(() => {
+                document.querySelector(".form-checkmark i").style.transform = "scale(1)";
+            }, 300)
+			
+        }, function(error) {
+        console.log('FAILED...', error);
+        });
+	}
 
     const labelAnimation = (e) => {
         
@@ -82,9 +107,37 @@ export default function MainTraining() {
     };
 
     const showHours = () => {
-        const hours = document.querySelector(".hours");
-        document.querySelector(".form h2").style.transform = "scale(1)"
-        ReactDOM.render(finalHours, hours)
+        if(!isFormValid())
+            return;
+
+            
+        if (buttonClickedCounter <= 0) {
+            buttonClickedCounter++;
+            const hours = document.querySelector(".hours");
+            hours.style.marginInline = "1rem 2rem";
+            document.querySelector(".form h2").style.transform = "scale(1)";
+            const hoursRoot = ReactDOM.createRoot(document.getElementById('hours'));
+            hoursRoot.render(finalHours);
+
+        } else if(buttonClickedCounter >= 1) {
+            sendEmail();
+
+        } else {
+            return;
+        }
+
+    }
+
+    const isFormValid = () => {
+        name = document.getElementById("name");
+        email = document.getElementById("email");
+        date = document.querySelector('input[type="date"]');
+
+        if ([name.value, email.value, date.value].includes("")) {
+            return false;
+        }
+
+        return true;
     }
 
     return (
@@ -102,8 +155,8 @@ export default function MainTraining() {
                         <input
                             type="text"
                             name="name"
-                            onClick={labelAnimation}
                             id="name"
+                            onClick={labelAnimation}
                         />
                     </div>
                     <div className="input-container">
@@ -115,8 +168,8 @@ export default function MainTraining() {
                         <input
                             type="email"
                             name="email"
-                            onClick={labelAnimation}
                             id="email"
+                            onClick={labelAnimation}
                         />
                     </div>
 
@@ -126,10 +179,18 @@ export default function MainTraining() {
                         max={twoWeeks}
                         onClick={getDay}
                     />
+
+                    <input
+                        name="message"
+                        id="message"
+                        type="text"
+                        style={{height: "0", padding: "0", border: "none"}}
+                    />
                     
                     <h2>Alege-ti un interval orar</h2>
                     <div
                         className="hours"
+                        id="hours"
                         onClick={getDay}
                     >
                     </div>
@@ -138,12 +199,14 @@ export default function MainTraining() {
                         onClick={showHours}
                         type="button"
                     >
-                        Confirma
+                        Confirmă
                     </button>
 
                 </form>
 
-
+            </div>
+            <div className="form-checkmark">
+                <i className="fa-solid fa-check"></i>
             </div>
         </div>
     )
