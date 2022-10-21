@@ -9,7 +9,7 @@ import Footer from './components/Footer';
 import "./css/gallery.scss";
 
 import cupaStraja19 from "./js/cupa-straja-19";
-import cupaStraja22 from "./js/cupa-strsja-22";
+import cupaStraja22 from "./js/cupa-straja-22";
 import cupaCraciunului21 from "./js/cupa-craciunului-21";
 
 export default function Gallery() {
