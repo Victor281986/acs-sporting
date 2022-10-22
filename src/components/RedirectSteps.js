@@ -37,7 +37,7 @@ export default function RedirectSteps() {
 			<section className="steps step-2">
 				<h3>2. Completează</h3>
 				<span>
-				 Completează formularul de mână, cu majuscule. Nu este necesară specificarea sumei (instituția fiscală o va calcula și o va vira conform legii) și nici atașarea Fișei Fiscale. Datele Academiei sunt precompletate.
+				 Completează formularul de mână, cu majuscule. Nu este necesară specificarea sumei (instituția fiscală o va calcula și o va vira conform legii) și nici atașarea Fișei Fiscale. Datele ACS Sporting Lupeni sunt precompletate.
 				</span>
 				<br /> <br />
 				<h4>Cum pot completa și trimite online?</h4>
