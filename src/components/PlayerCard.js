@@ -24,7 +24,7 @@ export default function PlayerCard(props) {
 	
 	return (
 		<span className={finalClass}>
-			<img src={"http://localhost:3000/images/" + dir + img + extension} alt={name} />
+			<img src={"http://sportinglupeni.ro/images/" + dir + img + extension} alt={name} />
 			<h2>{name}</h2>
 		</span>
 	)
