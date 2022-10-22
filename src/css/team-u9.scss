@@ -47,10 +47,6 @@
 	}
 }
 
-footer {
-  transform: translateY(500px);
-}
-
 @for $i from 1 through 11 {
   $card: "card-" + $i;
   .card-#{$i} {
@@ -107,4 +103,9 @@ footer {
 			 top: calc(#{$i - 1} * 60px + 30px) !important
     }
 	}
+
+   footer {
+     transform: translateY(600px);
+   }
+
 }
