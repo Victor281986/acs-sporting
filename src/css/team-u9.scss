@@ -48,7 +48,7 @@
 }
 
 footer {
-  margin-top: 300px
+  transform: translateY(300px);
 }
 
 @for $i from 1 through 11 {
