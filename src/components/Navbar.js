@@ -62,7 +62,7 @@ export default function Navbar() {
 				<Link to="/echipe">ECHIPE</Link>
 				<Link to="/parteneri">PARTENERI</Link>
 				<Link to="/program">PROGRAM COMPETIȚIONAL</Link>
-				<Link to="/antrenament-individual">ANTREMAENT INDIVIDUAL</Link>
+				<Link to="/antrenament-individual">ANTRENAMENT INDIVIDUAL</Link>
 				<Link to="/galerie-foto">GALERIE FOTO</Link>
 				<Link to="/redirectioneaza">REDIRECȚIONEAZĂ 3.5%</Link>
 			</div>
