@@ -47,6 +47,10 @@
 	}
 }
 
+footer {
+  margin-top: 300px
+}
+
 @for $i from 1 through 11 {
   $card: "card-" + $i;
   .card-#{$i} {
